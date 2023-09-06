@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{lease_agreement_id}-{lease_agreement_name}",
+ "creation": "2023-09-06 13:35:27.573768",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lease_agreement_id",
+  "lease_agreement_name",
+  "property",
+  "property_owner",
+  "tenant",
+  "lease_start_date",
+  "lease_end_date",
+  "rent_amount",
+  "security_deposit",
+  "lease_terms_and_conditions",
+  "maintenance_responsibilities"
+ ],
+ "fields": [
+  {
+   "fieldname": "lease_agreement_id",
+   "fieldtype": "Data",
+   "label": "Lease Agreement ID"
+  },
+  {
+   "fieldname": "lease_agreement_name",
+   "fieldtype": "Data",
+   "label": "Lease Agreement Name"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "property_owner",
+   "fieldtype": "Link",
+   "label": "Property Owner",
+   "options": "Property Owner"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "lease_start_date",
+   "fieldtype": "Date",
+   "label": "Lease Start Date"
+  },
+  {
+   "fieldname": "lease_end_date",
+   "fieldtype": "Date",
+   "label": "Lease End Date"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Data",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Data",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "lease_terms_and_conditions",
+   "fieldtype": "Data",
+   "label": "Lease Terms and Conditions"
+  },
+  {
+   "fieldname": "maintenance_responsibilities",
+   "fieldtype": "Data",
+   "label": "Maintenance Responsibilities"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-06 16:08:07.422103",
+ "modified_by": "Administrator",
+ "module": "Property App",
+ "name": "Lease Agreement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

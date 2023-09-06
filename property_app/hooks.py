@@ -133,6 +133,9 @@ app_license = "MIT"
 
 # Testing
 # -------
+fixtures = [{"dt":"Website Slideshow"} ,  
+            {"dt":"Website Settings"},
+            {"dt":"Web Page"}]
 
 # before_tests = "property_app.install.before_tests"
 

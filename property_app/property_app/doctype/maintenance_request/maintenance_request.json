@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-06 13:45:32.188084",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "maintenance_request_id",
+  "requester",
+  "request_date",
+  "property",
+  "issue",
+  "requester_contact",
+  "request_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "maintenance_request_id",
+   "fieldtype": "Data",
+   "label": "Maintenance Request ID"
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Data",
+   "label": "Requester"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Data",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Data",
+   "label": "Property"
+  },
+  {
+   "fieldname": "issue",
+   "fieldtype": "Data",
+   "label": "Issue"
+  },
+  {
+   "fieldname": "requester_contact",
+   "fieldtype": "Data",
+   "label": "Requester Contact"
+  },
+  {
+   "fieldname": "request_status",
+   "fieldtype": "Select",
+   "label": "Request Status",
+   "options": "\nOpen\nIn-Progress\nClosed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-06 13:45:32.188084",
+ "modified_by": "Administrator",
+ "module": "Property App",
+ "name": "Maintenance Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
