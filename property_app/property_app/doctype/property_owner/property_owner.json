@@ -1,51 +1,50 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{owner_name}-{###}",
  "creation": "2023-09-06 13:49:36.881786",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "owner_id",
   "owner_name",
-  "contact_information",
+  "phone",
   "property_type",
   "lease_agreement"
  ],
  "fields": [
   {
-   "fieldname": "owner_id",
-   "fieldtype": "Data",
-   "label": "Owner ID"
-  },
-  {
    "fieldname": "owner_name",
    "fieldtype": "Data",
-   "label": "Owner Name"
-  },
-  {
-   "fieldname": "contact_information",
-   "fieldtype": "Data",
-   "label": "Contact Information"
+   "label": "Owner Name",
+   "unique": 1
   },
   {
    "fieldname": "property_type",
-   "fieldtype": "Data",
-   "label": "Property Type"
+   "fieldtype": "Select",
+   "label": "Property Type",
+   "options": "\nResidential\nCommercial\nIndustrial"
   },
   {
    "fieldname": "lease_agreement",
+   "fieldtype": "Link",
+   "label": "Lease Agreement",
+   "options": "Lease Agreement"
+  },
+  {
+   "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Lease Agreement"
+   "label": "Phone"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-06 13:49:36.881786",
+ "modified": "2023-09-06 15:58:50.276577",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property Owner",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

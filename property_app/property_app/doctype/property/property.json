@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{property_name}-{property_id}",
+ "autoname": "format:{property_id}-{property_name}",
  "creation": "2023-09-06 12:41:38.907841",
  "default_view": "List",
  "doctype": "DocType",
@@ -82,7 +82,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-06 12:52:10.964560",
+ "modified": "2023-09-06 14:57:35.965328",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property",
