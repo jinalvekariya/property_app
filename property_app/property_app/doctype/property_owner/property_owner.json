@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-06 13:49:36.881786",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "owner_id",
+  "owner_name",
+  "contact_information",
+  "property_type",
+  "lease_agreement"
+ ],
+ "fields": [
+  {
+   "fieldname": "owner_id",
+   "fieldtype": "Data",
+   "label": "Owner ID"
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name"
+  },
+  {
+   "fieldname": "contact_information",
+   "fieldtype": "Data",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Data",
+   "label": "Property Type"
+  },
+  {
+   "fieldname": "lease_agreement",
+   "fieldtype": "Data",
+   "label": "Lease Agreement"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-06 13:49:36.881786",
+ "modified_by": "Administrator",
+ "module": "Property App",
+ "name": "Property Owner",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
