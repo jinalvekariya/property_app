@@ -10,9 +10,10 @@
  "field_order": [
   "property",
   "tenant",
+  "month",
   "payment_date",
   "payment_type",
-  "payment_amount",
+  "rent_collected",
   "payment_method",
   "payment_status",
   "bank_information",
@@ -43,11 +44,6 @@
    "options": "\nRent\nSecurity Deposit\nMaintenance Fees"
   },
   {
-   "fieldname": "payment_amount",
-   "fieldtype": "Currency",
-   "label": "Payment Amount"
-  },
-  {
    "fieldname": "payment_method",
    "fieldtype": "Select",
    "label": "Payment Method",
@@ -68,11 +64,21 @@
    "fieldname": "invoice_number",
    "fieldtype": "Data",
    "label": "Invoice Number"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "rent_collected",
+   "fieldtype": "Currency",
+   "label": "Rent Collected"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 11:47:15.962235",
+ "modified": "2023-09-11 12:06:06.779333",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Payment Record",
