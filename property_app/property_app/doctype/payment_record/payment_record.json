@@ -78,7 +78,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 12:06:06.779333",
+ "modified": "2023-09-11 18:26:51.413593",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Payment Record",
@@ -94,6 +94,29 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
    "share": 1,
    "write": 1
   }
