@@ -1,24 +1,30 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{property}-{request_type}",
  "creation": "2023-09-06 13:45:32.188084",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "request_title",
   "requester",
   "request_date",
   "property",
-  "issue",
+  "request_type",
   "requester_contact",
-  "request_status"
+  "status",
+  "assigned_to",
+  "assigned_date",
+  "completion_date"
  ],
  "fields": [
   {
    "fieldname": "requester",
-   "fieldtype": "Data",
-   "label": "Requester"
+   "fieldtype": "Link",
+   "label": "Requester",
+   "options": "Tenant"
   },
   {
    "fieldname": "request_date",
@@ -27,13 +33,9 @@
   },
   {
    "fieldname": "property",
-   "fieldtype": "Data",
-   "label": "Property"
-  },
-  {
-   "fieldname": "issue",
-   "fieldtype": "Data",
-   "label": "Issue"
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
   },
   {
    "fieldname": "requester_contact",
@@ -41,18 +43,46 @@
    "label": "Requester Contact"
   },
   {
-   "fieldname": "request_status",
+   "fieldname": "request_type",
    "fieldtype": "Select",
-   "label": "Request Status",
+   "label": "Request Type",
+   "options": "\nPlumbing\nElectrical"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
    "options": "\nOpen\nIn-Progress\nClosed"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned to",
+   "options": "Maintenance Staff"
+  },
+  {
+   "fieldname": "assigned_date",
+   "fieldtype": "Date",
+   "label": "Assigned Date"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Data",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "request_title",
+   "fieldtype": "Data",
+   "label": "Request Title"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-06 17:37:05.231919",
+ "modified": "2023-09-11 13:15:48.187880",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Maintenance Request",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
