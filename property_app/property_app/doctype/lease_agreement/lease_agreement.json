@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{lease_agreement_number}-{lease_name}",
+ "autoname": "format:{lease_name}",
  "creation": "2023-09-06 13:35:27.573768",
  "default_view": "List",
  "doctype": "DocType",
@@ -76,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 11:14:53.707514",
+ "modified": "2023-09-11 15:10:39.657560",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Lease Agreement",
