@@ -8,14 +8,7 @@ frappe.query_reports["Property Maintenance Report"] = {
             "fieldname": "status",
             "label": "Status",
             "fieldtype": "Select",
-            "options": ["Open", "In Progress", "Closed"],
-            "default": "Open",
-        },
-        {
-            "fieldname": "assigned_to",
-            "label": "Assigned To",
-            "fieldtype": "Link",
-            "options": "Maintenance Staff",
-        },
+            "options": [" ","Open", "In Progress", "Closed"],
+        }
 	]
 };
