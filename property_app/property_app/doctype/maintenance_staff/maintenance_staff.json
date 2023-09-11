@@ -7,7 +7,6 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "staff_id",
   "staff_name",
   "contact",
   "employee_type",
@@ -16,11 +15,6 @@
   "supervisor"
  ],
  "fields": [
-  {
-   "fieldname": "staff_id",
-   "fieldtype": "Data",
-   "label": "Staff ID"
-  },
   {
    "fieldname": "staff_name",
    "fieldtype": "Data",
@@ -55,7 +49,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-06 13:54:03.673969",
+ "modified": "2023-09-06 17:35:48.856419",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Maintenance Staff",

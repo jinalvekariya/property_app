@@ -1,14 +1,22 @@
-import datetime
 import frappe
+from frappe.utils import nowdate, add_days
 
 def execute():
+    today = nowdate()
+    future_date = add_days(today, 30)
 
-    expiration_threshold = datetime.date.today() + datetime.timedelta(days=30)
+    lease_agreements = frappe.get_all(
+        "Lease Agreement",
+        filters={
+            "status": "Active",
+            "lease_end_date": ("<=", future_date),
+        },
+        fields=["lease_name"],
+    )
+    
+    for agreement in lease_agreements:
+        lease_doc = frappe.get_doc("Lease Agreement", agreement.lease_name)
+        lease_doc.status = "Pending Renewal"
+        lease_doc.save(ignore_permissions=True)
 
-    leases_to_update = frappe.db.get_list("Lease Agreement", filters={"lease_end_date": ["<=", expiration_threshold], "status": "Active"})
-
-    for lease in leases_to_update:
-        lease_doc = frappe.db.get_doc("Lease Agreement", lease.name)
-
-        lease_doc.status = "Expired"
-        lease_doc.save()
+    frappe.db.commit()
