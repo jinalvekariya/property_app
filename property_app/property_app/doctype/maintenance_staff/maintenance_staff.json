@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{staff_name}",
  "creation": "2023-09-06 13:54:03.673969",
  "default_view": "List",
  "doctype": "DocType",
@@ -18,7 +19,8 @@
   {
    "fieldname": "staff_name",
    "fieldtype": "Data",
-   "label": "Staff Name"
+   "label": "Staff Name",
+   "unique": 1
   },
   {
    "fieldname": "contact",
@@ -49,10 +51,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-06 17:35:48.856419",
+ "modified": "2023-09-11 15:24:13.117534",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Maintenance Staff",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,1 +1,1 @@
-property_app.patches.lease_agreement
+property_app.patches.lease_agreement_new
