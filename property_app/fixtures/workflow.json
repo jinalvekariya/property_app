@@ -1,0 +1,298 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Lease Agreement",
+  "is_active": 1,
+  "modified": "2023-09-12 15:16:55.861547",
+  "name": "Property Leasing",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Property Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Leasing",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Property Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Leasing",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Application",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Property Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Leasing",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Pending",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Property Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Leasing",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Property Manager",
+    "doc_status": "2",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Leasing",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Rejected",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Panding for Approval",
+    "allow_self_approval": 1,
+    "allowed": "Property Manager",
+    "condition": null,
+    "next_state": "Application",
+    "parent": "Property Leasing",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Panding for Approval",
+    "allow_self_approval": 1,
+    "allowed": "Property Manager",
+    "condition": null,
+    "next_state": "Pending",
+    "parent": "Property Leasing",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Application"
+   },
+   {
+    "action": "Submit",
+    "allow_self_approval": 1,
+    "allowed": "Property Manager",
+    "condition": null,
+    "next_state": "Approved",
+    "parent": "Property Leasing",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Pending"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Property Manager",
+    "condition": null,
+    "next_state": "Approved",
+    "parent": "Property Leasing",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved"
+   },
+   {
+    "action": "Submit",
+    "allow_self_approval": 1,
+    "allowed": "Property Manager",
+    "condition": null,
+    "next_state": "Rejected",
+    "parent": "Property Leasing",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Pending"
+   }
+  ],
+  "workflow_name": "Property Leasing",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Maintenance Request",
+  "is_active": 1,
+  "modified": "2023-09-12 15:51:00.955747",
+  "name": "Maintenance Request Submitting",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Tenant",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Tenant",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Submit",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Maintenance Staff",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Maintenance Staff",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Assigned",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Maintenance Staff",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "In Progress",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Maintenance Staff",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Completed",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Panding for Approval",
+    "allow_self_approval": 1,
+    "allowed": "Tenant",
+    "condition": null,
+    "next_state": "Submit",
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Panding for Approval",
+    "allow_self_approval": 1,
+    "allowed": "Tenant",
+    "condition": null,
+    "next_state": "Approved",
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Submit"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Staff",
+    "condition": null,
+    "next_state": "Assigned",
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Approved"
+   },
+   {
+    "action": "Assigned to",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Staff",
+    "condition": null,
+    "next_state": "Assigned",
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Assigned"
+   },
+   {
+    "action": "In Progress",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Staff",
+    "condition": null,
+    "next_state": "Completed",
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "In Progress"
+   },
+   {
+    "action": "Completed",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Staff",
+    "condition": null,
+    "next_state": "Completed",
+    "parent": "Maintenance Request Submitting",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Completed"
+   }
+  ],
+  "workflow_name": "Maintenance Request Submitting",
+  "workflow_state_field": "workflow_state"
+ }
+]
