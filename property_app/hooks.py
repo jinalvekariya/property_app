@@ -131,14 +131,22 @@ app_license = "MIT"
 #	],
 # }
 
-# Testing
-# -------
+# Fixtures
 fixtures = [{"dt":"Website Slideshow"} ,  
             {"dt":"Website Settings"},
             {"dt":"Web Page"},
             {"dt":"Role" , "filters": [["name", "in", ["Property Manager","Maintenance Staff","Tenant"] ]]},
             {"dt":"Workflow"}]
 
+website_context = {
+    "favicon": "/files/Propertylogo.png",
+    "app_logo": "/files/Propertylogo.png",
+    "footer_logo": "/files/Propertylogo.png",
+    "banner_image":"/files/Propertylogo.png",
+}
+
+# Testing
+# -------
 
 # before_tests = "property_app.install.before_tests"
 
