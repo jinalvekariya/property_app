@@ -136,9 +136,9 @@ fixtures = [{"dt":"Website Slideshow"} ,
             {"dt":"Website Settings"},
             {"dt":"Web Page"},
             {"dt":"Navbar Settings"},
-            {"dt":"Role" , "filters": [["name", "in", ["Property Manager","Maintenance Staff","Tenant"] ]]},
-            {"dt": "Workflow","filters":[["document_type","in",["Property Leasing", "Maintenance Request Submitting"]]]},
-            {"dt": "Workflow State"}]
+            {"dt":"Role" , "filters": [["name", "in", ["Property Manager","Maintenance Staff","Tenant"]]]},
+            {"dt":"Workflow","filters":[["name","in", ["Property Leasing", "Maintenance Request Submitting"]]]},
+            {"dt":"Workflow State"}]
 
 website_context = {
     "favicon": "/files/Propertylogo.png",
