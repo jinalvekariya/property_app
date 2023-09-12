@@ -17,7 +17,8 @@
   "status",
   "assigned_to",
   "assigned_date",
-  "completion_date"
+  "completion_date",
+  "amended_from"
  ],
  "fields": [
   {
@@ -74,11 +75,21 @@
    "fieldname": "request_title",
    "fieldtype": "Data",
    "label": "Request Title"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Request",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-09-11 15:27:31.661262",
+ "modified": "2023-09-12 16:06:37.006349",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Maintenance Request",
@@ -94,6 +105,41 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Staff",
    "share": 1,
    "write": 1
   }
