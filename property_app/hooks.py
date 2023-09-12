@@ -135,7 +135,8 @@ app_license = "MIT"
 # -------
 fixtures = [{"dt":"Website Slideshow"} ,  
             {"dt":"Website Settings"},
-            {"dt":"Web Page"}]
+            {"dt":"Web Page"},
+            {"dt": "Role" , "filters": [["name", "in", ["Property Manager","Maintenance Staff","Tenant"] ]]}]
 
 # before_tests = "property_app.install.before_tests"
 

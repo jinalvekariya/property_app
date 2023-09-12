@@ -1,0 +1,30 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Website Slideshow",
+  "header": null,
+  "modified": "2023-09-06 15:12:37.501515",
+  "name": "Property Slideshow",
+  "slideshow_items": [
+   {
+    "description": null,
+    "heading": "Residential",
+    "image": "/files/1.avif",
+    "parent": "Property Slideshow",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   },
+   {
+    "description": null,
+    "heading": "Commercial",
+    "image": "/files/2.avif",
+    "parent": "Property Slideshow",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   }
+  ],
+  "slideshow_name": "Property Slideshow"
+ }
+]
