@@ -16,8 +16,8 @@
   "lease_end_date",
   "rent_amount",
   "security_deposit",
-  "lease_term",
   "status",
+  "lease_terms",
   "amended_from"
  ],
  "fields": [
@@ -59,11 +59,6 @@
    "label": "Lease Agreement Number"
   },
   {
-   "fieldname": "lease_term",
-   "fieldtype": "Int",
-   "label": "Lease Term"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
@@ -73,6 +68,11 @@
    "fieldname": "lease_name",
    "fieldtype": "Data",
    "label": "Lease Name"
+  },
+  {
+   "fieldname": "lease_terms",
+   "fieldtype": "Data",
+   "label": "Lease Terms"
   },
   {
    "fieldname": "amended_from",
@@ -87,7 +87,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-13 17:13:51.953279",
+ "modified": "2023-09-13 18:42:52.877789",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Lease Agreement",
