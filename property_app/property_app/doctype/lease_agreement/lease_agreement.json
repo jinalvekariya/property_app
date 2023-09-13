@@ -87,7 +87,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-13 15:35:44.991539",
+ "modified": "2023-09-13 17:13:51.953279",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Lease Agreement",
@@ -108,6 +108,7 @@
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
