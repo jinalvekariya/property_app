@@ -1,24 +1,23 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{lease_name}",
- "creation": "2023-09-06 13:35:27.573768",
+ "autoname": "format:{payment_date}-{property}",
+ "creation": "2023-09-11 11:38:03.369163",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "lease_agreement_number",
-  "lease_name",
   "property",
   "tenant",
-  "lease_start_date",
-  "lease_end_date",
-  "rent_amount",
-  "security_deposit",
-  "status",
-  "lease_terms",
-  "amended_from"
+  "month",
+  "payment_date",
+  "payment_type",
+  "rent_collected",
+  "payment_method",
+  "payment_status",
+  "bank_information",
+  "invoice_number"
  ],
  "fields": [
   {
@@ -34,63 +33,55 @@
    "options": "Tenant"
   },
   {
-   "fieldname": "lease_start_date",
+   "fieldname": "payment_date",
    "fieldtype": "Date",
-   "label": "Lease Start Date"
+   "label": "Payment Date"
   },
   {
-   "fieldname": "lease_end_date",
-   "fieldtype": "Date",
-   "label": "Lease End Date"
-  },
-  {
-   "fieldname": "rent_amount",
-   "fieldtype": "Currency",
-   "label": "Rent Amount"
-  },
-  {
-   "fieldname": "security_deposit",
-   "fieldtype": "Currency",
-   "label": "Security Deposit"
-  },
-  {
-   "fieldname": "lease_agreement_number",
-   "fieldtype": "Data",
-   "label": "Lease Agreement Number"
-  },
-  {
-   "fieldname": "status",
+   "fieldname": "payment_type",
    "fieldtype": "Select",
-   "label": "Status",
-   "options": "\nActive\nTerminated\nPending Renewal"
+   "label": "Payment Type",
+   "options": "\nRent\nSecurity Deposit\nMaintenance Fees"
   },
   {
-   "fieldname": "lease_name",
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "\nCash\nCheque\nOnline Transfer"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "\nReceived\nPending\nDeclined"
+  },
+  {
+   "fieldname": "bank_information",
    "fieldtype": "Data",
-   "label": "Lease Name"
+   "label": "Bank Information"
   },
   {
-   "fieldname": "lease_terms",
+   "fieldname": "invoice_number",
    "fieldtype": "Data",
-   "label": "Lease Terms"
+   "label": "Invoice Number"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Lease Agreement",
-   "print_hide": 1,
-   "read_only": 1
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "rent_collected",
+   "fieldtype": "Currency",
+   "label": "Rent Collected"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-09-13 18:42:52.877789",
+ "modified": "2023-09-11 18:26:51.413593",
  "modified_by": "Administrator",
  "module": "Property App",
- "name": "Lease Agreement",
+ "name": "Payment Record",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -115,9 +106,7 @@
    "read": 1,
    "report": 1,
    "role": "Property Manager",
-   "select": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
