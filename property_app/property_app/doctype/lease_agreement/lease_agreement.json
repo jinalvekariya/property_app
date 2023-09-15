@@ -14,6 +14,7 @@
   "tenant",
   "lease_start_date",
   "lease_end_date",
+  "duration",
   "rent_amount",
   "security_deposit",
   "status",
@@ -59,6 +60,7 @@
    "label": "Lease Agreement Number"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
@@ -82,12 +84,18 @@
    "options": "Lease Agreement",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-13 18:42:52.877789",
+ "modified": "2023-09-15 19:01:57.098769",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Lease Agreement",

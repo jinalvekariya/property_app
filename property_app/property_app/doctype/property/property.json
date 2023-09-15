@@ -82,7 +82,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 18:21:45.682864",
+ "modified": "2023-09-15 17:25:15.244321",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property",
@@ -103,7 +103,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "if_owner": 1,
