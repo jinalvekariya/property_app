@@ -118,7 +118,7 @@ web_include_css = "/assets/property_app/css/propertyapp.css"
 scheduler_events = {
     
     "corn": {
-        "* 21 * * *": [
+        "* * * * *": [
             "property_app.templates.scheduler.update_lease_agreements"
         ]
     },
