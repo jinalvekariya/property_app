@@ -118,8 +118,8 @@ web_include_css = "/assets/property_app/css/propertyapp.css"
 scheduler_events = {
     
     "corn": {
-        "* * * * *": [
-            "property_app.templates.scheduler.corn"
+        "* 21 * * *": [
+            "property_app.templates.scheduler.update_lease_agreements"
         ]
     },
 	# "all": [
@@ -137,6 +137,9 @@ scheduler_events = {
 	# "monthly": [
 	# 	"property_app.tasks.monthly"
 	# ],
+    # "yearly": [
+    #     "property_app.templates.scheduler.update_lease_agreements"
+    # ],
 }
 
 # Fixtures

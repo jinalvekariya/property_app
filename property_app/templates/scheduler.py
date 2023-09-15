@@ -1,15 +1,21 @@
 import frappe
-import string
-import random
+from frappe.utils import today, add_years
 
-def corn():
+def update_lease_agreements():
+    current_date = today()
 
-    print("/n/n New Note Inserted /n/n")
-    letters = string.ascii_letters
-    payment_record = " ".join(random.choice(letters) for i in range(10))
+    one_year_from_now = add_years(current_date, 1)
 
-    new_note = frappe.get_doc({"doctype": "Payment Record",
-                               "title": payment_record
-                               })
-    new_note.insert()
-    frappe.db.commit()
+    lease_agreements_to_update = frappe.get_all(
+        'Lease Agreement',
+        filters={'lease_end_date': current_date},
+        fields=['lease_name']
+    )
+
+    for lease in lease_agreements_to_update:
+        try:
+            frappe.db.set_value('Lease Agreement', lease.lease_name, 'lease_end_date', one_year_from_now)
+            frappe.db.commit()
+        except Exception as e:
+            frappe.log_error(f"Error updating lease agreement {lease.lease_name}: {str(e)}")
+
