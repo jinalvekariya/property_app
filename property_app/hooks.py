@@ -115,23 +115,29 @@ web_include_css = "/assets/property_app/css/propertyapp.css"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"property_app.tasks.all"
-#	],
-#	"daily": [
-#		"property_app.tasks.daily"
-#	],
-#	"hourly": [
-#		"property_app.tasks.hourly"
-#	],
-#	"weekly": [
-#		"property_app.tasks.weekly"
-#	],
-#	"monthly": [
-#		"property_app.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+    
+    "corn": {
+        "* * * * *": [
+            "property_app.templates.scheduler.corn"
+        ]
+    },
+	# "all": [
+	# 	"property_app.tasks.all"
+	# ],
+	# "daily": [
+	# 	"property_app.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"property_app.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"property_app.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"property_app.tasks.monthly"
+	# ],
+}
 
 # Fixtures
 fixtures = [{"dt":"Website Slideshow"} ,  
