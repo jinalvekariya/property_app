@@ -6,16 +6,17 @@ app_publisher = "Jinal Balar"
 app_description = "Property Management System"
 app_email = "vekariyajinal7@gmail.com"
 app_license = "MIT"
+app_logo_url = "/assets/property_app/img/Propertylogo.png"
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/property_app/css/property_app.css"
+app_include_css = "/assets/property_app/css/propertyapp.css"
 # app_include_js = "/assets/property_app/js/property_app.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/property_app/css/property_app.css"
+web_include_css = "/assets/property_app/css/propertyapp.css"
 # web_include_js = "/assets/property_app/js/property_app.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -61,7 +62,8 @@ app_license = "MIT"
 # }
 
 # Installation
-# ------------
+# --------
+# ----
 
 # before_install = "property_app.install.before_install"
 # after_install = "property_app.install.after_install"
@@ -113,23 +115,29 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"property_app.tasks.all"
-#	],
-#	"daily": [
-#		"property_app.tasks.daily"
-#	],
-#	"hourly": [
-#		"property_app.tasks.hourly"
-#	],
-#	"weekly": [
-#		"property_app.tasks.weekly"
-#	],
-#	"monthly": [
-#		"property_app.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+    
+    "corn": {
+        "* * * * *": [
+            "property_app.templates.scheduler.corn"
+        ]
+    },
+	# "all": [
+	# 	"property_app.tasks.all"
+	# ],
+	# "daily": [
+	# 	"property_app.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"property_app.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"property_app.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"property_app.tasks.monthly"
+	# ],
+}
 
 # Fixtures
 fixtures = [{"dt":"Website Slideshow"} ,  
@@ -141,10 +149,10 @@ fixtures = [{"dt":"Website Slideshow"} ,
             {"dt":"Workflow State"}]
 
 website_context = {
-    "favicon": "/files/Propertylogo.png",
-    "app_logo": "/files/Propertylogo.png",
-    "footer_logo": "/files/Propertylogo.png",
-    "banner_image": "/files/Propertylogo.png",
+    "favicon": "/assets/property_app/img/Propertylogo.png",
+    "app_logo": "/assets/property_app/img/Propertylogo.png",
+    "footer_logo": "/assets/property_app/img/Propertylogo.png",
+    "banner_image": "/assets/property_app/img/Propertylogo.png",
 }
 
 # Testing
