@@ -5,7 +5,6 @@ def execute():
     today = datetime.now().date()
     threshold_date = today + timedelta(days=30)
 
-    # Query for lease agreements
     lease_agreements = frappe.get_list(
         "Lease Agreement",
         filters={"lease_end_date": ("<=", threshold_date)},
