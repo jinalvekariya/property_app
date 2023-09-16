@@ -12,8 +12,9 @@
   "tenant",
   "month",
   "payment_date",
-  "payment_type",
   "rent_collected",
+  "payment_details_section",
+  "payment_type",
   "payment_method",
   "payment_status",
   "bank_information",
@@ -74,11 +75,15 @@
    "fieldname": "rent_collected",
    "fieldtype": "Currency",
    "label": "Rent Collected"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 18:26:51.413593",
+ "modified": "2023-09-16 14:45:03.001013",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Payment Record",
@@ -86,39 +91,13 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Property Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Tenant",
-   "share": 1,
-   "write": 1
+   "share": 1
   }
  ],
  "sort_field": "modified",
