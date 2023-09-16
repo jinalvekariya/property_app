@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{owner_name}-{###}",
+ "autoname": "format:{owner_name}",
  "creation": "2023-09-06 13:49:36.881786",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "owner_name",
+  "property",
   "phone",
   "property_type",
   "lease_agreement"
@@ -17,7 +18,9 @@
   {
    "fieldname": "owner_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Owner Name",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -36,11 +39,17 @@
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 11:50:25.694023",
+ "modified": "2023-09-16 14:27:28.237851",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property Owner",

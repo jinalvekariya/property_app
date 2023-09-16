@@ -9,8 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "lease_agreement_number",
-  "lease_name",
   "property",
+  "lease_name",
   "tenant",
   "lease_start_date",
   "lease_end_date",
@@ -18,6 +18,7 @@
   "rent_amount",
   "security_deposit",
   "status",
+  "terms_section",
   "lease_terms",
   "amended_from"
  ],
@@ -73,7 +74,7 @@
   },
   {
    "fieldname": "lease_terms",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Lease Terms"
   },
   {
@@ -91,12 +92,17 @@
    "fieldtype": "Data",
    "label": "Duration",
    "read_only": 1
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break",
+   "label": "Terms"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-16 11:48:44.873592",
+ "modified": "2023-09-16 14:48:31.703821",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Lease Agreement",
