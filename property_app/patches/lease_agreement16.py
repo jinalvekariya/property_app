@@ -17,9 +17,9 @@ def execute():
         remaining_days = (doc.lease_end_date - today).days
         doc.duration = remaining_days
 
-        if remaining_days <= 0:
+        if remaining_days < 0:
             doc.status = "Terminated"
-        elif remaining_days <= 30:
+        elif remaining_days < 30:
             doc.status = "Pending Renewal"
         else:
             doc.status = "Active"

@@ -9,8 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "lease_agreement_number",
-  "lease_name",
   "property",
+  "lease_name",
   "tenant",
   "lease_start_date",
   "lease_end_date",
@@ -18,6 +18,7 @@
   "rent_amount",
   "security_deposit",
   "status",
+  "terms_section",
   "lease_terms",
   "amended_from"
  ],
@@ -73,7 +74,7 @@
   },
   {
    "fieldname": "lease_terms",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Lease Terms"
   },
   {
@@ -89,13 +90,19 @@
    "allow_on_submit": 1,
    "fieldname": "duration",
    "fieldtype": "Data",
-   "label": "Duration"
+   "label": "Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break",
+   "label": "Terms"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-15 19:01:57.098769",
+ "modified": "2023-09-16 14:48:31.703821",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Lease Agreement",
@@ -104,38 +111,12 @@
  "permissions": [
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Property Manager",
-   "select": 1,
-   "share": 1,
-   "submit": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Tenant",
    "share": 1,
    "write": 1
   }

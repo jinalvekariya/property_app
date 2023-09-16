@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{property_id}-{property_name}",
+ "autoname": "format:{property_name}",
  "creation": "2023-09-06 12:41:38.907841",
  "default_view": "List",
  "doctype": "DocType",
@@ -14,10 +14,11 @@
   "property_address",
   "property_size",
   "rent_amount",
+  "column_break_4ye1w",
   "property_owner",
+  "tenant",
   "lease_start_date",
   "lease_end_date",
-  "tenant",
   "property_status"
  ],
  "fields": [
@@ -30,7 +31,9 @@
   {
    "fieldname": "property_name",
    "fieldtype": "Data",
-   "label": "Property Name"
+   "in_list_view": 1,
+   "label": "Property Name",
+   "reqd": 1
   },
   {
    "fieldname": "property_type",
@@ -55,8 +58,9 @@
   },
   {
    "fieldname": "property_owner",
-   "fieldtype": "Data",
-   "label": "Property Owner"
+   "fieldtype": "Link",
+   "label": "Property Owner",
+   "options": "Property Owner"
   },
   {
    "fieldname": "lease_start_date",
@@ -70,19 +74,24 @@
   },
   {
    "fieldname": "tenant",
-   "fieldtype": "Data",
-   "label": "Tenant"
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
   },
   {
    "fieldname": "property_status",
    "fieldtype": "Select",
    "label": "Property Status",
    "options": "\nVacant\nOccupied\nUnder Maintenance"
+  },
+  {
+   "fieldname": "column_break_4ye1w",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-15 17:25:15.244321",
+ "modified": "2023-09-16 14:21:09.328592",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property",
@@ -91,7 +100,6 @@
  "permissions": [
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -100,36 +108,6 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "email": 1,
-   "export": 1,
-   "if_owner": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Property Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Tenant",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Maintenance Staff",
-   "share": 1
   }
  ],
  "sort_field": "modified",
