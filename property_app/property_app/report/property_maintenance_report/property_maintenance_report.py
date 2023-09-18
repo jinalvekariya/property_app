@@ -40,13 +40,13 @@ def get_maintenance_request(filters=None):
     if filters and filters.get('status'):
         filter_conditions['status'] = filters['status']
 
-    maintenence_request_data = frappe.get_all(
+    maintenance_request_data = frappe.get_all(
         "Maintenance Request",
         filters=filter_conditions,
         fields=["request_title", "status", "assigned_to"],
     )
     
-    for dt in maintenence_request_data:
+    for dt in maintenance_request_data:
         row = {
             'request_title': dt.get('request_title'),
             'status': dt.get('status'),
@@ -57,6 +57,7 @@ def get_maintenance_request(filters=None):
     return data
 
 def generate_chart(data):
+    datasets = []
     status_counts = {
         'Open': 0,
         'In Progress': 0,
@@ -85,11 +86,4 @@ def generate_chart(data):
         'height': 300,
     }
     
-    datasets = [
-        {
-            'name': 'Status',
-            'values': [status_counts['Open'], status_counts['In Progress'], status_counts['Closed']],
-        }
-    ]
-    
-    return chart,datasets
+    return chart, datasets

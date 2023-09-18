@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:T-{tenant_name}",
+ "autoname": "format:{tenant_name}",
  "creation": "2023-09-06 13:21:38.616494",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,13 +11,7 @@
   "details_section",
   "tenant_name",
   "phone",
-  "lease_details_section",
-  "property",
-  "property_owner",
-  "rent_amount",
-  "security_deposit",
-  "column_break_rxx2m",
-  "lease_agreement"
+  "email_id"
  ],
  "fields": [
   {
@@ -33,51 +27,19 @@
    "label": "Phone "
   },
   {
-   "fieldname": "rent_amount",
-   "fieldtype": "Currency",
-   "label": "Rent Amount"
-  },
-  {
-   "fieldname": "security_deposit",
-   "fieldtype": "Data",
-   "label": "Security Deposit"
-  },
-  {
-   "fieldname": "property_owner",
-   "fieldtype": "Link",
-   "label": "Property Owner",
-   "options": "Property Owner"
-  },
-  {
-   "fieldname": "property",
-   "fieldtype": "Link",
-   "label": "Property",
-   "options": "Property"
-  },
-  {
    "fieldname": "details_section",
    "fieldtype": "Section Break",
    "label": "Details"
   },
   {
-   "fieldname": "lease_details_section",
-   "fieldtype": "Section Break",
-   "label": "Lease Details"
-  },
-  {
-   "fieldname": "lease_agreement",
-   "fieldtype": "Link",
-   "label": "Lease Agreement",
-   "options": "Lease Agreement"
-  },
-  {
-   "fieldname": "column_break_rxx2m",
-   "fieldtype": "Column Break"
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-16 14:36:02.401921",
+ "modified": "2023-09-18 18:27:30.634515",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Tenant",
@@ -95,6 +57,27 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
+   "share": 1
   }
  ],
  "sort_field": "modified",
