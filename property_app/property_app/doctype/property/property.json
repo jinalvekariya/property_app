@@ -9,17 +9,18 @@
  "engine": "InnoDB",
  "field_order": [
   "property_id",
-  "property_name",
+  "property_owner",
   "property_type",
-  "property_address",
   "property_size",
   "rent_amount",
+  "security_deposit",
   "column_break_4ye1w",
-  "property_owner",
+  "property_name",
+  "property_status",
+  "property_address",
+  "amended_from",
   "tenant",
-  "lease_start_date",
-  "lease_end_date",
-  "property_status"
+  "lease_agreement"
  ],
  "fields": [
   {
@@ -43,13 +44,14 @@
   },
   {
    "fieldname": "property_address",
-   "fieldtype": "Data",
-   "label": "Property Address"
+   "fieldtype": "Link",
+   "label": "Property Address",
+   "options": "Address"
   },
   {
    "fieldname": "property_size",
    "fieldtype": "Data",
-   "label": "Property Size"
+   "label": "Property Size(sqft)"
   },
   {
    "fieldname": "rent_amount",
@@ -58,25 +60,8 @@
   },
   {
    "fieldname": "property_owner",
-   "fieldtype": "Link",
-   "label": "Property Owner",
-   "options": "Property Owner"
-  },
-  {
-   "fieldname": "lease_start_date",
-   "fieldtype": "Date",
-   "label": "Lease Start Date"
-  },
-  {
-   "fieldname": "lease_end_date",
-   "fieldtype": "Date",
-   "label": "Lease End Date"
-  },
-  {
-   "fieldname": "tenant",
-   "fieldtype": "Link",
-   "label": "Tenant",
-   "options": "Tenant"
+   "fieldtype": "Data",
+   "label": "Property Owner"
   },
   {
    "fieldname": "property_status",
@@ -87,11 +72,36 @@
   {
    "fieldname": "column_break_4ye1w",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Data",
+   "label": "Tenant"
+  },
+  {
+   "fieldname": "lease_agreement",
+   "fieldtype": "Data",
+   "label": "Lease Agreement"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-09-16 14:21:09.328592",
+ "modified": "2023-09-18 18:12:40.152283",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property",
@@ -107,6 +117,29 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
