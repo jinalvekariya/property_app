@@ -9,18 +9,21 @@
  "engine": "InnoDB",
  "field_order": [
   "property_id",
-  "property_owner",
   "property_type",
   "property_size",
   "rent_amount",
-  "security_deposit",
   "column_break_4ye1w",
   "property_name",
   "property_status",
   "property_address",
-  "amended_from",
-  "tenant",
-  "lease_agreement"
+  "security_deposit",
+  "lease_agreement",
+  "property_owner_details_section",
+  "property_owner",
+  "phone",
+  "column_break_kue1i",
+  "email_id",
+  "amended_from"
  ],
  "fields": [
   {
@@ -60,8 +63,9 @@
   },
   {
    "fieldname": "property_owner",
-   "fieldtype": "Data",
-   "label": "Property Owner"
+   "fieldtype": "Link",
+   "label": "Property Owner",
+   "options": "Property Owner"
   },
   {
    "fieldname": "property_status",
@@ -79,6 +83,18 @@
    "label": "Security Deposit"
   },
   {
+   "fetch_from": "property_owner.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Property Owner Phone"
+  },
+  {
+   "fetch_from": "property_owner.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Property Owner Email"
+  },
+  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -88,9 +104,13 @@
    "read_only": 1
   },
   {
-   "fieldname": "tenant",
-   "fieldtype": "Data",
-   "label": "Tenant"
+   "fieldname": "property_owner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Property Owner Details"
+  },
+  {
+   "fieldname": "column_break_kue1i",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "lease_agreement",
@@ -101,7 +121,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-18 18:12:40.152283",
+ "modified": "2023-09-20 12:53:40.825728",
  "modified_by": "Administrator",
  "module": "Property App",
  "name": "Property",
@@ -139,7 +159,6 @@
    "report": 1,
    "role": "Tenant",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
